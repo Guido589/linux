@@ -227,6 +227,37 @@ pmp_done:
 	csrr a0, CSR_MHARTID
 #endif /* CONFIG_RISCV_M_MODE */
 
+	/* 
+	 * Setup IOPMP to permit access to all memory.
+	 *
+	 * Associate every source with the first memory domain (0b0010)
+	 */
+	li a2, 2
+	csrw CSR_SRCMD0, a2
+	csrw CSR_SRCMD1, a2
+	csrw CSR_SRCMD2, a2
+	csrw CSR_SRCMD3, a2
+	csrw CSR_SRCMD4, a2
+	csrw CSR_SRCMD5, a2
+	csrw CSR_SRCMD6, a2
+	csrw CSR_SRCMD7, a2
+	csrw CSR_SRCMD8, a2
+	csrw CSR_SRCMD9, a2
+	csrw CSR_SRCMD10, a2
+	csrw CSR_SRCMD11, a2
+	csrw CSR_SRCMD12, a2
+	csrw CSR_SRCMD13, a2
+	csrw CSR_SRCMD14, a2
+	csrw CSR_SRCMD15, a2
+	/* Associate the first memory domain with the first entry */
+	li a2, 1
+	csrw CSR_MDCFG0, a2
+	/* Permit access to all memory */
+	li a2, -1
+	csrw CSR_ENTRY_ADDR0, a2
+	li a2, (ENTRY_CFG_TOR | ENTRY_CFG_R | ENTRY_CFG_W | ENTRY_CFG_X)
+	csrw CSR_PMPCFG0, a2
+
 	/* Load the global pointer */
 .option push
 .option norelax
