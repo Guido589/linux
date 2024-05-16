@@ -256,7 +256,7 @@ pmp_done:
 	li a2, -1
 	csrw CSR_ENTRY_ADDR0, a2
 	li a2, (ENTRY_CFG_TOR | ENTRY_CFG_R | ENTRY_CFG_W | ENTRY_CFG_X)
-	csrw CSR_PMPCFG0, a2
+	csrw CSR_ENTRY_CFG0, a2
 
 	/* Load the global pointer */
 .option push
