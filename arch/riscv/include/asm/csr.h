@@ -375,25 +375,25 @@
 #define CSR_MHARTID		0xf14
 
 // SRCMD Table Registers
-#define CSR_SRCMD0 0x8FC
-#define CSR_SRCMD1 0x91C
-#define CSR_SRCMD2 0x93C
-#define CSR_SRCMD3 0x95C
-#define CSR_SRCMD4 0x97C
-#define CSR_SRCMD5 0x99C
-#define CSR_SRCMD6 0x9BC
-#define CSR_SRCMD7 0x9DC
-#define CSR_SRCMD8 0x9FC
-#define CSR_SRCMD9 0xA1C
-#define CSR_SRCMD10 0xA3C
-#define CSR_SRCMD11 0xA5C
-#define CSR_SRCMD12 0xA7C
-#define CSR_SRCMD13 0xA9C
-#define CSR_SRCMD14 0xABC
-#define CSR_SRCMD15 0xADC
-#define CSR_MDCFG0 0x800
-#define CSR_ENTRY_ADDR0 0xCFC
-#define CSR_ENTRY_CFG0  0xD04
+#define CSR_SRCMD0 0xBC0
+#define CSR_SRCMD1 0xBC1
+#define CSR_SRCMD2 0xBC2
+#define CSR_SRCMD3 0xBC3
+#define CSR_SRCMD4 0xBC4
+#define CSR_SRCMD5 0xBC5
+#define CSR_SRCMD6 0xBC6
+#define CSR_SRCMD7 0xBC7
+#define CSR_SRCMD8 0xBC8
+#define CSR_SRCMD9 0xBC9
+#define CSR_SRCMD10 0xBCA
+#define CSR_SRCMD11 0xBCB
+#define CSR_SRCMD12 0xBCC
+#define CSR_SRCMD13 0xBCD
+#define CSR_SRCMD14 0xBCE
+#define CSR_SRCMD15 0xBCF
+#define CSR_MDCFG0 0x7c0
+#define CSR_ENTRY_ADDR0 0xBD0
+#define CSR_ENTRY_CFG0  0xBE0
 
 /* Machine-Level Window to Indirectly Accessed Registers (AIA) */
 #define CSR_MISELECT		0x350
