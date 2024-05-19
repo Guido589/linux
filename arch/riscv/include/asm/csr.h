@@ -374,7 +374,7 @@
 #define CSR_MIMPID		0xf13
 #define CSR_MHARTID		0xf14
 
-// SRCMD Table Registers
+// IOPMP Registers
 #define CSR_SRCMD0 0xBC0
 #define CSR_SRCMD1 0xBC1
 #define CSR_SRCMD2 0xBC2
@@ -394,6 +394,8 @@
 #define CSR_MDCFG0 0x7c0
 #define CSR_ENTRY_ADDR0 0xBD0
 #define CSR_ENTRY_CFG0  0xBE0
+#define CSR_MDCFGLCK 0xBF0
+#define CSR_ENTRYLCK 0xBF1
 
 /* Machine-Level Window to Indirectly Accessed Registers (AIA) */
 #define CSR_MISELECT		0x350

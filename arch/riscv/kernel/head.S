@@ -236,6 +236,11 @@ ENTRY(_start_kernel)
 	li a2, (ENTRY_CFG_TOR | ENTRY_CFG_R | ENTRY_CFG_W | ENTRY_CFG_X)
 	csrw CSR_ENTRY_CFG0, a2
 
+	/* Disable IOPMP locks */
+	li a2, 0
+	csrw CSR_MDCFGLCK, a2
+	csrw CSR_ENTRYLCK, a2
+
 	/*
 	 * Setup a PMP to permit access to all of memory.  Some machines may
 	 * not implement PMPs, so we set up a quick trap handler to just skip
